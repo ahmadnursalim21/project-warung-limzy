@@ -8,3 +8,14 @@ Route::get('/', function () {
 });
 
 Route::get('/admin/users', [UserController::class, 'index']);
+
+
+Route::get('/cart', function () {
+    return view('cart.index');
+});
+Route::get('/login', function () {
+    return view('auth.login');
+});
+Route::get('/register', function () {
+    return view('auth.register');
+});
