@@ -9,9 +9,15 @@ Route::get('/', function () {
 
 Route::get('/admin/users', [UserController::class, 'index']);
 
+Route::get('admin', function () {
+    return view('admin.index');
+});
 
 Route::get('/cart', function () {
     return view('cart.index');
+});
+Route::get('/detailProduct', function () {
+    return view('product.detailProduct');
 });
 Route::get('/login', function () {
     return view('auth.login');
